@@ -1,0 +1,23 @@
+{
+  "name": "nodejsmachinelearningsamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lendle1028/NodeJSMachineLearningSamples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lendle1028/NodeJSMachineLearningSamples/issues"
+  },
+  "homepage": "https://github.com/lendle1028/NodeJSMachineLearningSamples#readme",
+  "dependencies": {
+    "machinelearn": "^2.1.3"
+  }
+}

@@ -14,7 +14,7 @@ tf.disableDeprecationWarnings();
     });
 
     ln.fit(split.xTrain, split.yTrain);
-    for(let i=0; i<1; i++){
+    for(let i=0; i<split.xTest.length; i++){
         let y=ln.predict(new Array(split.xTest[i]));
         console.log(split.yTest[i], y);
     }

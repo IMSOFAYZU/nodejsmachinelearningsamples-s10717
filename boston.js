@@ -1,7 +1,8 @@
 const {Boston}=require('machinelearn/datasets');
 const {LinearRegression}=require('machinelearn/linear_model');
 const { train_test_split }=require('machinelearn/model_selection');
-
+const tf=require('@tensorflow/tfjs');
+tf.disableDeprecationWarnings();
 (async function(){
     const boston=new Boston();
     const d=await boston.load();
@@ -11,5 +12,10 @@ const { train_test_split }=require('machinelearn/model_selection');
         train_size: 0.9,
         random_state: Math.random()*100
     });
-    
+
+    ln.fit(split.xTrain, split.yTrain);
+    for(let i=0; i<1; i++){
+        let y=ln.predict(new Array(split.xTest[i]));
+        console.log(split.yTest[i], y);
+    }
 })();
